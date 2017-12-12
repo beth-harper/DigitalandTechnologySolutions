@@ -1,3 +1,5 @@
+
+
 from postcode import centre_point
 from crimes_in_radius import crimes_in_radius
 from postcode_validate import validate_postcode
@@ -59,3 +61,8 @@ def restart():
             produce_output()
     except ValueError():
         print("Invalid input")
+
+        
+if __name__ == "__main__":
+    produce_output()
+    restart()
