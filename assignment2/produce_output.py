@@ -44,20 +44,12 @@ def produce_output():
     else:
         print("Sorry, the details you provided were invalid!")
         
-        
-        
-def restart():
-    
-    """This function asks the user if the wish to quit, if "Y" or "y" is entered
-    the program ends - if "N" or "n" is entered, the program restarts. If the
-    user does not enter one of these characters, a ValueError is raised."""
-    
     quit = input("Quit? (Y/N)")
     
     try:
-        if (quit == "Y") or (quit == "y"):
+        if (quit.lower() == "y") or (quit.lower() == "yes"):
             sys.exit()
-        elif (quit == "N") or (quit == "n"):
+        elif (quit.lower() == "n") or (quit.lower() == "no"):
             produce_output()
     except ValueError():
         print("Invalid input")
@@ -65,4 +57,3 @@ def restart():
         
 if __name__ == "__main__":
     produce_output()
-    restart()
